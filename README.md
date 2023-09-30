@@ -1,6 +1,4 @@
-# Nuxt 3 WunderGraph Vue Query
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Wundergraph Plugins example with Nuxt 3
 
 ## Setup
 

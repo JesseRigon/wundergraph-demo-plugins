@@ -34,4 +34,7 @@ const baseOperations = configureWunderGraphOperations<OperationsConfiguration>({
 	},
 });
 
-export default _.merge(baseOperations, plugins.operations)
+// const operations = _.merge(baseOperations, plugins.operations);
+
+
+export default baseOperations;

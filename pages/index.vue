@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { $wgraph } = useNuxtApp();
 const { data, suspense } = $wgraph.useQuery({
-	operationName: 'Country',
+	operationName: 'Dragons',
 });
 await suspense();
 </script>

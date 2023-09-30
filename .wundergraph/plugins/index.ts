@@ -5,4 +5,4 @@ export const plugins = {
 	configs: [ countries.config ],
 	operations: _.merge({}, countries.operations),
 	servers: _.merge({}, countries.server),
-}
+};

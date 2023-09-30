@@ -3,11 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "run-p dev:nuxt dev:wundergraph open",
-    "dev:wundergraph": "wunderctl up",
+    "dev": "run-p dev:nuxt dev:wundergraph wunderplugins open",
+    "dev:wundergraph": "wunderctl up --debug",
     "dev:nuxt": "nuxt dev",
-    "wunderplugins": "cd ./.wundergraph/plugins/ && node filesync.mjs",
-    "start": "npm run wunderplugins && npm run dev:wundergraph",
+    "wunderplugins": "cd ./.wundergraph/plugins/ && node filesync",
     "open": "wait-on -d 500 http://localhost:9991 && open-cli http://localhost:3000",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -32,7 +31,7 @@
   },
   "dependencies": {
     "@tanstack/vue-query": "^4.27.0",
-    "@wundergraph/sdk": "^0.143.1",
+    "@wundergraph/sdk": "^0.174.1",
     "@wundergraph/vue-query": "^0.2.6",
     "fs-extra": "^11.1.1",
     "inquirer": "^9.2.11",

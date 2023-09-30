@@ -6,4 +6,4 @@ export const countries = {
 	config: countriesConfig,
 	operations: countriesOperations,
 	server: countriesServers
-}
+};

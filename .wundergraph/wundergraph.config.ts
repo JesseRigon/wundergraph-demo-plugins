@@ -1,7 +1,7 @@
 import { authProviders, configureWunderGraphApplication, cors, introspect, templates } from '@wundergraph/sdk';
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';
-import { plugins } from './plugins'
+import { plugins } from './plugins';
 
 const spaceX = introspect.graphql({
 	apiNamespace: 'spacex',
@@ -10,17 +10,15 @@ const spaceX = introspect.graphql({
 
 // configureWunderGraph emits the configuration
 configureWunderGraphApplication({
-	apis: [spaceX, ...plugins.configs ],
+	apis: [spaceX, ...plugins.configs],
 	server,
 	operations,
-	generate: {
-		codeGenerators: [
-			{
-				templates: [templates.typescript.client],
-				path: './components/generated',
-			},
-		],
-	},
+	codeGenerators: [
+		{
+			templates: [templates.typescript.client],
+			path: './components/generated',
+		},
+	],
 	cors: {
 		...cors.allowAll,
 		allowedOrigins: process.env.NODE_ENV === 'production' ? ['https://*'] : ['http://*'],
